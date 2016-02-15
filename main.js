@@ -51,3 +51,23 @@ for (var i = 0; i < evenElements.length; i++) {
 var propertyTest = document.getElementById('main');
 propertyTest.style.fontFamily = 'monospace';
 propertyTest.style.fontSize = "200%";
+
+var li = document.createElement('li');
+console.log(li);
+
+var newElement = li.innerText = 'another SuperCool list item! Woo!';
+console.log(newElement);
+console.log(li);
+getSingleElement.appendChild(li);
+console.log(allListItems);
+
+var anotherListElement = document.createElement('li');
+anotherListElement.innerText = "prepend, my friend!";
+console.log(anotherListElement);
+getSingleElement.insertBefore(anotherListElement, getSingleElement.firstChild);
+console.log(allListItems);
+
+var andOneMoreListElement = document.createElement('li');
+andOneMoreListElement.innerText = "The Prepend Doesn't End!";
+getSingleElement.insertBefore(andOneMoreListElement, getSingleElement.firstChild);
+console.log(allListItems);
